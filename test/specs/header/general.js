@@ -107,7 +107,7 @@ describe('Header General', function () {
     });
   });
 
-  it.only('Second Row Links are aligned horizontally', function () {
+  it('Second Row Links are aligned horizontally', function () {
 
     const liElements = $$(sel.secondRowAllLinksTag)[1].$$(sel.secondRowLinkTag);
     let location;
@@ -121,7 +121,7 @@ describe('Header General', function () {
     });
   });
 
-  it.only('Second row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
+  it('Second row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
     const liElements = $$(sel.secondRowAllLinksTag)[1].$$(sel.secondRowLinkTag);
 
     liElements.forEach((li, index) => {
