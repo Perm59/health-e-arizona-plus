@@ -1,5 +1,4 @@
 export default {
-    toggleLink: '#lnk_English',
     createAccountLink: '#lnk_CreateAccountLnk',
     returningUserLogInLink: '#lnk_ReturningUserLogIn',
     helpLink: '#lnk_Help',
@@ -13,6 +12,7 @@ export default {
     firstRowLinkTag: 'li',
     secondRowLinkTag: 'li',
     logoImage: 'img'
+
 
 }
 

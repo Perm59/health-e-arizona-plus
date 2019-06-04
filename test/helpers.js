@@ -1,4 +1,6 @@
 
+import sel from '../../selectors/header';
+
 class Helpers {
 
   getToggleElement (lang) {
@@ -6,6 +8,10 @@ class Helpers {
     const id = `#lnk_${capitalize(lang)}`;
     return $(id);
   }
+
+  liElementsFirstRowArray = $$(sel.firstRowAllLinksTag)[0].$$(sel.firstRowLinkTag);
+
+  liElementsSecondRowArray = $$(sel.secondRowAllLinksTag)[1].$$(sel.secondRowLinkTag);
 }
 
 export default new Helpers()
