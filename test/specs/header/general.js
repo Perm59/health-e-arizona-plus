@@ -95,13 +95,13 @@ describe('Header General', function () {
     });
   });
 
-  it.only('First row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
+  it('First row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
     const liElements = $$(sel.firstRowAllLinksTag)[0].$$(sel.firstRowLinkTag);
 
     liElements.forEach((li, index) => {
       if (index < liElements.length - 1) {
         // console.log(li.getCSSProperty('border-right-width'));
-        assert.equal(li.getCSSProperty('border-right-width').value, '1px')
+        assert.equal(li.getCSSProperty('border-right-width').value, exp.pipeSeparatorWidth)
       } else {
         // console.log(li.getCSSProperty('border-right-width'));
         assert.equal(li.getCSSProperty('border-right-width').value, '0px')
