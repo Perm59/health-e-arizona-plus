@@ -84,7 +84,7 @@ describe('Header General', function () {
   it('First Row Links are aligned horizontally', function () {
     let location;
 
-    help.liElementsFirstRowArray.forEach(li => {
+    help.getFirstRowElements().forEach(li => {
       if (location === undefined) {
         location = li.getLocation('y');
       } else {
@@ -95,8 +95,8 @@ describe('Header General', function () {
 
   it('First row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
 
-    help.liElementsFirstRowArray.forEach((li, index) => {
-      if (index < liElements.length - 1) {
+    help.getFirstRowElements().forEach((li, index) => {
+      if (index < help.getFirstRowElements().length - 1) {
         assert.equal(li.getCSSProperty('border-right-width').value, exp.pipeSeparatorWidth)
       } else {
         assert.equal(li.getCSSProperty('border-right-width').value, '0px')
@@ -107,7 +107,7 @@ describe('Header General', function () {
   it('Second Row Links are aligned horizontally', function () {
     let location;
 
-    help.liElementsSecondRowArray.forEach(li => {
+    help.getFirstRowElements().forEach(li => {
       if (location === undefined) {
         location = li.getLocation('y');
       } else {
@@ -118,8 +118,8 @@ describe('Header General', function () {
 
   it('Second row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
 
-    help.liElementsSecondRowArray.forEach((li, index) => {
-      if (index < liElements.length - 1) {
+    help.getSecondRowElements().forEach((li, index) => {
+      if (index < help.getSecondRowElements().length - 1) {
         assert.equal(li.getCSSProperty('border-right-width').value, exp.pipeSeparatorWidth)
       } else {
         assert.equal(li.getCSSProperty('border-right-width').value, '0px')
