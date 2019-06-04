@@ -7,12 +7,12 @@ export default {
     englishLink: '#lnk_English',
     spanishLink: '#lnk_Spanish',
     header: '.header-container',
-    logo: '.logo',
+    logo: 'div.logo',
     firstRowAllLinksTag: 'ul',
     secondRowAllLinksTag: 'ul',
     firstRowLinkTag: 'li',
-    secondRowLinkTag: 'li'
-
+    secondRowLinkTag: 'li',
+    logoImage: 'img'
 
 }
 
