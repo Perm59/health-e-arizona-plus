@@ -5,7 +5,15 @@ export default {
     helpLink: '#lnk_Help',
     faqsLink: '#lnk_faqs',
     englishLink: '#lnk_English',
-    spanishLink: '#lnk_Spanish'
+    spanishLink: '#lnk_Spanish',
+    header: '.header-container',
+    logo: '.logo',
+    firstRowAllLinksTag: 'ul',
+    secondRowAllLinksTag: 'ul',
+    firstRowLinkTag: 'li',
+    secondRowLinkTag: 'li'
+
+
 }
 
 

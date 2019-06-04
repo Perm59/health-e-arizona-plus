@@ -2,9 +2,10 @@ import { assert } from 'chai';
 import sel from '../../selectors/header';
 import dictionary from '../../dictionary/header';
 import help from '../../helpers';
+import exp from '../../expected/header';
 
 
-describe('Header', () => {
+describe('Header Eng-Esp Elements Exist', () => {
 
   ['english', 'spanish'].forEach(lang => {
 
@@ -59,10 +60,55 @@ describe('Header', () => {
         assert.equal(spanishLink.getText(), dictionary.header.links.spanishLink[language]);
       });
     });
-    // describe(`1 row links - elements exist - ${lang}`, function () {
-    //   const language = lang;
-    //   browser.url('/');
+  });
+});
 
+describe('Header General', function () {
+  it('Header is on Top of Home Page', function () {
+    let headerVerticalLoc = $(sel.header).getLocation('y');
+    assert.equal(headerVerticalLoc, exp.headerVerticalLoc);
+  });
 
+  it('Header is 100% page width', function () {
+    let headerWidth = $(sel.header).getCSSProperty('width').value;
+    assert.equal(headerWidth, exp.headerWidth);
+  });
+
+  it('Logo->first row links->second row links - horizontal location from left to right', function () {
+    let logoLoc = $(sel.logo).getLocation('x');
+    let firstRowLoc = $$(sel.firstRowAllLinksTag)[0].getLocation('x');
+    let secondRowLoc = $$(sel.secondRowAllLinksTag)[1].getLocation('x');
+    assert.isTrue(logoLoc < firstRowLoc && firstRowLoc < secondRowLoc);
+  });
+
+  it('First Row Links are aligned horizontally', function () {
+
+    const liElements = $$(sel.firstRowAllLinksTag)[0].$$(sel.firstRowLinkTag);
+    let location;
+
+    liElements.forEach(li => {
+      if (location === undefined) {
+        location = li.getLocation('y');
+      } else {
+        assert.isTrue(location === li.getLocation('y'))
+      }
     });
+  });
+
+  it.only('First row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
+    const liElements = $$(sel.firstRowAllLinksTag)[0].$$(sel.firstRowLinkTag);
+
+    liElements.forEach((li, index) => {
+      if (index < liElements.length - 1) {
+        // console.log(li.getCSSProperty('border-right-width'));
+        assert.equal(li.getCSSProperty('border-right-width').value, '1px')
+      } else {
+        // console.log(li.getCSSProperty('border-right-width'));
+        assert.equal(li.getCSSProperty('border-right-width').value, '0px')
+      }
+    });
+
+  });
+
+
 });
