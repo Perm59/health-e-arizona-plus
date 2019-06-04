@@ -100,15 +100,37 @@ describe('Header General', function () {
 
     liElements.forEach((li, index) => {
       if (index < liElements.length - 1) {
-        // console.log(li.getCSSProperty('border-right-width'));
         assert.equal(li.getCSSProperty('border-right-width').value, exp.pipeSeparatorWidth)
       } else {
-        // console.log(li.getCSSProperty('border-right-width'));
         assert.equal(li.getCSSProperty('border-right-width').value, '0px')
       }
     });
-
   });
 
+  it.only('Second Row Links are aligned horizontally', function () {
+
+    const liElements = $$(sel.secondRowAllLinksTag)[1].$$(sel.secondRowLinkTag);
+    let location;
+
+    liElements.forEach(li => {
+      if (location === undefined) {
+        location = li.getLocation('y');
+      } else {
+        assert.isTrue(location === li.getLocation('y'))
+      }
+    });
+  });
+
+  it.only('Second row links are separated by pipe-separator(each (except for last) link has a border on right side)', function () {
+    const liElements = $$(sel.secondRowAllLinksTag)[1].$$(sel.secondRowLinkTag);
+
+    liElements.forEach((li, index) => {
+      if (index < liElements.length - 1) {
+        assert.equal(li.getCSSProperty('border-right-width').value, exp.pipeSeparatorWidth)
+      } else {
+        assert.equal(li.getCSSProperty('border-right-width').value, '0px')
+      }
+    });
+  });
 
 });
