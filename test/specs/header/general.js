@@ -69,16 +69,16 @@ describe('Header General', function () {
     assert.equal(headerVerticalLoc, exp.headerVerticalLoc);
   });
 
-  it('Header is 100% page width', function () {
+  it('Header width', function () {
     let headerWidth = $(sel.header).getCSSProperty('width').value;
     assert.equal(headerWidth, exp.headerWidth);
   });
 
   it('Logo->first row links->second row links - horizontal location from left to right', function () {
-    let logoLoc = $(sel.logo).getLocation('x');
-    let firstRowLoc = $$(sel.firstRowAllLinksTag)[0].getLocation('x');
-    let secondRowLoc = $$(sel.secondRowAllLinksTag)[1].getLocation('x');
-    assert.isTrue(logoLoc < firstRowLoc && firstRowLoc < secondRowLoc);
+    // let logoLoc = $(sel.logo).getLocation('x');
+    // let firstRowLoc = $$(sel.firstRowAllLinksTag)[0].getLocation('x');
+    // let secondRowLoc = $$(sel.secondRowAllLinksTag)[1].getLocation('x');
+    assert.isTrue(help.horizLocationCheck3Elemets(sel.logo, $$(sel.firstRowAllLinksTag)[0], $$(sel.secondRowAllLinksTag)[1]));
   });
 
   it('First Row Links are aligned horizontally', function () {

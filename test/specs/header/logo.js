@@ -13,7 +13,7 @@ describe('Logo', function () {
     assert.equal(size, exp.logoSize);
   });
 
-  it('URL', function () {
+  it('source URL', function () {
     browser.url('/Default/images/health-e-arizona-plus-logo.png');
     assert.isTrue($(sel.logoImage).isDisplayed());
   });

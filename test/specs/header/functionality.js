@@ -1,7 +1,6 @@
 import { assert } from 'chai';
 import sel from '../../selectors/header';
 import help from '../../helpers';
-import exp from '../../expected/header';
 import dictionary from "../../dictionary/header";
 
 describe('Header Functionality', function () {
