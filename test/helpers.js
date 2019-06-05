@@ -22,14 +22,14 @@ class Helpers {
     return (emailLocation < errorLocation);
   }
 
-//to check the vertical order of 3 elements (Top, Middle, Bottom):
+//to check vertical order of 3 elements (Top, Middle, Bottom):
   static vertLocationCheck3Elemets(selectorTopEl, selectorMiddleEl, selectorBottomEl){
     const topElLocation = $(selectorTopEl).getLocation('y');
     const middleElLocation = $(selectorMiddleEl).getLocation('y');
     const bottomElLocation = $(selectorBottomEl).getLocation('y');
     return (topElLocation < middleElLocation && middleElLocation < bottomElLocation);
   }
-  //to check the horizontal order of 3 elements (Top, Middle, Bottom):
+  //to check horizontal order of 3 elements (Top, Middle, Bottom):
   static horizLocationCheck3Elemets(selectorLeftEl, selectorMiddleEl, selectorRightEl){
     const leftElLocation = $(selectorLeftEl).getLocation('x');
     const middleElLocation = $(selectorMiddleEl).getLocation('x');

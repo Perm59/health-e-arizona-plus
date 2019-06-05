@@ -5,7 +5,7 @@ import help from '../../helpers';
 import exp from '../../expected/ind-fam-get-started';
 
 
-describe('Ind-Fam-Get-Started Eng-Esp Elements Exist', function () {
+describe('Ind-Fam-Get-Started - Eng-Esp Elements Exist', function () {
 
   ['english', 'spanish'].forEach(lang => {
 
