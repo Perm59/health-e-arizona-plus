@@ -1,9 +1,9 @@
 import { assert } from 'chai';
-import sel from '../../selectors/ind-fam-get-started';
+import sel from '../../selectors/get-started-default-banner';
 import help from '../../helpers';
-import dictionary from "../../dictionary/ind-fam-get-started"
+import dictionary from "../../dictionary/get-started-default-banner"
 
-describe('Ind-Fam Get Started Functionality', function () {
+describe('Get Started Default Banner Functionality', function () {
 
   ['english', 'spanish'].forEach(lang => {
 
@@ -32,7 +32,7 @@ describe('Ind-Fam Get Started Functionality', function () {
         let needCoverText = $(sel.needCoverText);
         needCoverText.waitForDisplayed(2000);
         assert.isTrue(needCoverText.isDisplayed());
-        assert.equal(needCoverText.getText(), dictionary.indFamGetStarted.links.needCoverText[language]);
+        assert.equal(needCoverText.getText(), dictionary.getStartedDefaultBanner.links.needCoverText[language]);
       });
     });
   });

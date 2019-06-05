@@ -1,45 +1,10 @@
 import { assert } from 'chai';
-import sel from '../../selectors/ind-fam-get-started';
-import dictionary from '../../dictionary/ind-fam-get-started';
+import sel from '../../selectors/get-started-default-banner';
 import help from '../../helpers';
-import exp from '../../expected/ind-fam-get-started';
-
-
-describe('Ind-Fam-Get-Started - Eng-Esp Elements Exist', function () {
-
-  ['english', 'spanish'].forEach(lang => {
-
-    describe(`ind-fam-get-started - elements exist - ${lang}`, function () {
-      const language = lang;
-      browser.url('/');
-
-      before(() => {
-        let langToggle = help.getToggleElement(language);
-
-        langToggle.waitForDisplayed(5000);
-        langToggle.click();
-
-        langToggle = help.getToggleElement(language);
-        langToggle.waitForDisplayed(5000);
-      });
-
-
-      it('title', function () {
-        let title = $(sel.title);
-        assert.isTrue(title.isDisplayed());
-        assert.equal(title.getText(), dictionary.indFamGetStarted.links.title[language]);
-      });
-
-      it('text', function () {
-        let text = $(sel.text);
-        assert.isTrue(text.isDisplayed());
-        assert.equal(text.getText(), dictionary.indFamGetStarted.links.text[language]);
-      });
-    });
-  });
-});
+import exp from '../../expected/get-started-default-banner';
 
 describe('general', function (){
+  browser.url('/');
 
   it('section is under header', function () {
     assert.isTrue(help.vertLocationCheck2Elemets(sel.header, sel.indFamGetStarted));

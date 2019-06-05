@@ -1,6 +1,6 @@
 import { assert } from 'chai';
-import sel from '../../selectors/ind-fam-get-started';
-import exp from '../../expected/ind-fam-get-started';
+import sel from '../../selectors/get-started-default-banner';
+import exp from '../../expected/get-started-default-banner';
 
 describe('title', function () {
   browser.url('/');
