@@ -11,7 +11,11 @@ export default {
   secondRowAllLinksTag: 'ul',
   firstRowLinkTag: 'li',
   secondRowLinkTag: 'li',
-  logoImage: 'img'
+  logoImage: 'img',
+  userAgreement: '#ctl00_lbl_Page_Title',
+  userID: '#lbl_username',
+  helpCenter: '.ui-dialog-title',
+  faqs: '.ui-dialog-title'
 
 }
 

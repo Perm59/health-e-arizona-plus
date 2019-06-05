@@ -72,8 +72,10 @@ describe('Links', function () {
 describe('Links - focus outline width', function () {
 
    it('create account', function () {
-     browser.execute(() =>
-       document.querySelector('#lnk_CreateAccountLnk').focus());
+     browser.execute((selector) => {
+       document.querySelector(selector).focus();
+     }, sel.createAccountLink);
+
      if (browser.options.capabilities.browserName === 'chrome') {
        assert.equal($(sel.createAccountLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
      }
@@ -83,8 +85,10 @@ describe('Links - focus outline width', function () {
    });
 
    it('returning user log in', function () {
-     browser.execute(() =>
-       document.querySelector('#lnk_ReturningUserLogIn').focus());
+     browser.execute((selector) => {
+       document.querySelector(selector).focus();
+     }, sel.returningUserLogInLink);
+
      if (browser.options.capabilities.browserName === 'chrome') {
        assert.equal($(sel.returningUserLogInLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
      }
@@ -94,8 +98,10 @@ describe('Links - focus outline width', function () {
    });
 
    it('help', function () {
-     browser.execute(() =>
-       document.querySelector('#lnk_Help').focus());
+     browser.execute((selector) => {
+       document.querySelector(selector).focus();
+     }, sel.helpLink);
+
      if (browser.options.capabilities.browserName === 'chrome') {
        assert.equal($(sel.helpLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
      }
@@ -105,8 +111,10 @@ describe('Links - focus outline width', function () {
    });
 
    it('FAQs', function () {
-     browser.execute(() =>
-       document.querySelector('#lnk_faqs').focus());
+     browser.execute((selector) => {
+       document.querySelector(selector).focus();
+     }, sel.faqsLink);
+
      if (browser.options.capabilities.browserName === 'chrome') {
        assert.equal($(sel.faqsLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
      }
@@ -116,8 +124,10 @@ describe('Links - focus outline width', function () {
    });
 
    it('English', function () {
-     browser.execute(() =>
-       document.querySelector('#lnk_English').focus());
+     browser.execute((selector) => {
+       document.querySelector(selector).focus();
+     }, sel.englishLink);
+
      if (browser.options.capabilities.browserName === 'chrome') {
        assert.equal($(sel.englishLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
      }
@@ -127,8 +137,10 @@ describe('Links - focus outline width', function () {
    });
 
    it('Spanish', function () {
-     browser.execute(() =>
-       document.querySelector('#lnk_Spanish').focus());
+     browser.execute((selector) => {
+       document.querySelector(selector).focus();
+     }, sel.spanishLink);
+
      if (browser.options.capabilities.browserName === 'chrome') {
        assert.equal($(sel.spanishLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
      }

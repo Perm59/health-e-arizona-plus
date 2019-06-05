@@ -24,6 +24,22 @@ const dictionary = {
       spanishLink: {
         english: 'Español',
         spanish: 'Español'
+      },
+      userAgreement: {
+        english: 'User Agreement',
+        spanish: 'Acuerdo del usuario'
+      },
+      userID: {
+        english: 'User ID',
+        spanish: 'Nombre de Usuario'
+      },
+      helpCenter: {
+        english: 'Help',
+        spanish: 'Ayuda'
+      },
+      faqs: {
+        english: 'FAQs',
+        spanish: 'FAQs'
       }
     }
   }
