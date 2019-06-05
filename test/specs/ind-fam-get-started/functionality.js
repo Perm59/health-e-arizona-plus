@@ -1,6 +1,7 @@
 import { assert } from 'chai';
 import sel from '../../selectors/ind-fam-get-started';
 import help from '../../helpers';
+import dictionary from "../../dictionary/ind-fam-get-started"
 
 describe('Ind-Fam Get Started Functionality', function () {
 
@@ -21,17 +22,18 @@ describe('Ind-Fam Get Started Functionality', function () {
         langToggle.waitForDisplayed(5000);
       });
 
-      it('get started link -> ???', function () {
-        $(sel.getStartedButton).click();
-        let userAgreement
-      ??
-        = $(sel.userAgreement);
-        userAgreement.waitForDisplayed(2000);
-      ????
-        assert.isTrue(userAgreement.isDisplayed());
-      ??
-          assert.equal(userAgreement.getText(), dictionary.header.links.userAgreement[language]);
+      it('get started link -> Individual & Family', function () {
+        if (language === 'english') {
+          $(sel.getStartedButtonEng).click();
+        }
+        if (language === 'spanish'){
+          $(sel.getStartedButtonEs).click();
+        }
+        let needCoverText = $(sel.needCoverText);
+        needCoverText.waitForDisplayed(2000);
+        assert.isTrue(needCoverText.isDisplayed());
+        assert.equal(needCoverText.getText(), dictionary.indFamGetStarted.links.needCoverText[language]);
       });
     });
   });
-}):
+});

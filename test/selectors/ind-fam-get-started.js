@@ -8,5 +8,7 @@ export default {
   leftSideImg: 'img',
   getStartedImgEng: 'img',
   getStartedImgEs: 'img',
-  getStartedButton: '#img_GetStart'
+  getStartedButtonEng: '#img_GetStart',
+  getStartedButtonEs: '#img_GetStart_ES',
+  needCoverText: '#bodyuc_lbl_need_coverage'
 }

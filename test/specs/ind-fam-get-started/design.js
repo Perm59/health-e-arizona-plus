@@ -5,44 +5,44 @@ import exp from '../../expected/ind-fam-get-started';
 describe('title', function () {
   browser.url('/');
   it('text-align', function () {
-      assert.equal($(sel.title.getCSSProperty('text-align').parsed.hex, exp.titleTextAlign));
+    assert.equal($(sel.title).getCSSProperty('text-align').value, exp.titleTextAlign);
   });
 
   it('font-size', function () {
-    assert.equal($(sel.title.getCSSProperty('font-size').parsed.hex, exp.titleFontSize));
+    assert.equal($(sel.title).getCSSProperty('font-size').value, exp.titleFontSize);
   });
 
   it('font-weight', function () {
-    assert.equal($(sel.title.getCSSProperty('font-weight').parsed.hex, exp.titleFontWeight));
+    assert.equal($(sel.title).getCSSProperty('font-weight').value, exp.titleFontWeight);
   });
 
   it('font-family', function () {
-    assert.equal($(sel.title.getCSSProperty('font-family').parsed.hex, exp.titleFontFamily));
+    assert.equal($(sel.title).getCSSProperty('font-family').value, exp.titleFontFamily);
   });
 
   it('font-color', function () {
-    assert.equal($(sel.title.getCSSProperty('font-color').parsed.hex, exp.titleFontColor));
+    assert.equal($(sel.title).getCSSProperty('color').parsed.hex, exp.titleFontColor);
   });
 });
 
 describe('text', function () {
   it('text-align', function () {
-    assert.equal($(sel.text.getCSSProperty('text-align').parsed.hex, exp.textTextAlign));
+    assert.equal($(sel.text).getCSSProperty('text-align').value, exp.textTextAlign);
   });
 
   it('font-size', function () {
-    assert.equal($(sel.text.getCSSProperty('font-size').parsed.hex, exp.textFontSize));
+    assert.equal($(sel.text).getCSSProperty('font-size').value, exp.textFontSize);
   });
 
   it('font-weight', function () {
-    assert.equal($(sel.text.getCSSProperty('font-weight').parsed.hex, exp.textFontWeight));
+    assert.equal($(sel.text).getCSSProperty('font-weight').value, exp.textFontWeight);
   });
 
   it('font-family', function () {
-    assert.equal($(sel.text.getCSSProperty('font-family').parsed.hex, exp.textFontFamily));
+    assert.equal($(sel.text).getCSSProperty('font-family').value, exp.textFontFamily);
   });
 
   it('font-color', function () {
-    assert.equal($(sel.text.getCSSProperty('font-color').parsed.hex, exp.textFontColor));
+    assert.equal($(sel.text).getCSSProperty('color').parsed.hex, exp.textFontColor);
   });
 });

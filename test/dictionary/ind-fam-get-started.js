@@ -40,6 +40,10 @@ const dictionary = {
       faqs: {
         english: 'FAQs',
         spanish: 'FAQs'
+      },
+      needCoverText: {
+        english: 'Need Coverage?',
+        spanish: '¿Necesita cobertura?'
       }
     }
   }

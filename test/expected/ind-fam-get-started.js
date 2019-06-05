@@ -7,11 +7,10 @@ export default {
   titleFontWeight: 700,
   titleFontFamily: 'calibri',
   titleFontColor: '#353938',
-  textTextAlign: 'right',
+  textTextAlign: 'start',
   textFontSize: '14.6667px',
   textFontWeight: 400,
-  textFontFamily: 'Verdana, Tahoma, Arial',
-  textFontColor: 'rgb 0,0,0'
-
+  textFontFamily: 'verdana',
+  textFontColor: '#000000'
 
 }
