@@ -24,7 +24,6 @@ describe('Other Options Get Started Design ', function () {
   it('subsection titles font-size', function () {
     sel.allTitlesArray.forEach(el => {
       assert.equal($(el).getCSSProperty('font-size').value, exp.titleFontSize);
-
     })
   });
 
@@ -115,8 +114,8 @@ describe('Other Options Get Started Design ', function () {
     })
   });
 
-  it.only('subsection images size', function (){
-    sel.allImagesArrayEng.forEach((el, index) => {
+  it('subsection images size', function (){
+    sel.allImagesArrayEng.forEach(el => {
       let width = $(el).getCSSProperty('width').parsed.value;
       let height = $(el).getCSSProperty('height').parsed.value;
       let size = `${width}x${height}px`;
