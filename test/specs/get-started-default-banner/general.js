@@ -7,7 +7,7 @@ describe('general', function (){
   browser.url('/');
 
   it('section is under header', function () {
-    assert.isTrue(help.vertLocationCheck2Elemets(sel.header, sel.indFamGetStarted));
+    assert.isTrue(help.vertLocationCheck2Elemets(sel.header, sel.getStartedDefaultBanner));
   });
 
   it('left side width', function () {

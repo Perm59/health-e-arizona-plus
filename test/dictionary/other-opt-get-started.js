@@ -32,6 +32,14 @@ const dictionary = {
       needCoverText: {
         english: 'Need Coverage?',
         spanish: '¿Necesita cobertura?'
+      },
+      userLogIn: {
+        english: 'User Log In',
+        spanish: 'Inicio de la sesión del usuario'
+      },
+      exploreOptions: {
+        english: 'Explore Options',
+        spanish: 'Explorar las opciones'
       }
     }
   }

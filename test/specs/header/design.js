@@ -69,85 +69,20 @@ describe('Links', function () {
         assert.equal(el.$('a').getCSSProperty('text-decoration-line').value, exp.textDecorationLine)
       });
     });
-describe('Links - focus outline width', function () {
 
-   it('create account', function () {
-     browser.execute((selector) => {
-       document.querySelector(selector).focus();
-     }, sel.createAccountLink);
+    it('all links - focus outline width', function () {
+        sel.allLinksArray.forEach( el => {
+        browser.execute((selector) => {
+        document.querySelector(selector).focus();
+        }, el);
 
-     if (browser.options.capabilities.browserName === 'chrome') {
-       assert.equal($(sel.createAccountLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-     }
-     if (browser.options.capabilities.browserName === 'firefox') {
-       assert.equal($(sel.createAccountLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
-     }
-   });
-
-   it('returning user log in', function () {
-     browser.execute((selector) => {
-       document.querySelector(selector).focus();
-     }, sel.returningUserLogInLink);
-
-     if (browser.options.capabilities.browserName === 'chrome') {
-       assert.equal($(sel.returningUserLogInLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-     }
-     if (browser.options.capabilities.browserName === 'firefox') {
-       assert.equal($(sel.returningUserLogInLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
-     }
-   });
-
-   it('help', function () {
-     browser.execute((selector) => {
-       document.querySelector(selector).focus();
-     }, sel.helpLink);
-
-     if (browser.options.capabilities.browserName === 'chrome') {
-       assert.equal($(sel.helpLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-     }
-     if (browser.options.capabilities.browserName === 'firefox') {
-       assert.equal($(sel.helpLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
-     }
-   });
-
-   it('FAQs', function () {
-     browser.execute((selector) => {
-       document.querySelector(selector).focus();
-     }, sel.faqsLink);
-
-     if (browser.options.capabilities.browserName === 'chrome') {
-       assert.equal($(sel.faqsLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-     }
-     if (browser.options.capabilities.browserName === 'firefox') {
-       assert.equal($(sel.faqsLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
-     }
-   });
-
-   it('English', function () {
-     browser.execute((selector) => {
-       document.querySelector(selector).focus();
-     }, sel.englishLink);
-
-     if (browser.options.capabilities.browserName === 'chrome') {
-       assert.equal($(sel.englishLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-     }
-     if (browser.options.capabilities.browserName === 'firefox') {
-       assert.equal($(sel.englishLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
-     }
-   });
-
-   it('Spanish', function () {
-     browser.execute((selector) => {
-       document.querySelector(selector).focus();
-     }, sel.spanishLink);
-
-     if (browser.options.capabilities.browserName === 'chrome') {
-       assert.equal($(sel.spanishLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-     }
-     if (browser.options.capabilities.browserName === 'firefox') {
-       assert.equal($(sel.spanishLink).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
-     }
-   });
- });
+        if (browser.options.capabilities.browserName === 'chrome') {
+          assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
+        }
+        if (browser.options.capabilities.browserName === 'firefox') {
+          assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
+      }
+    })
+  });
 });
 

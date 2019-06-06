@@ -7,6 +7,21 @@ export default {
   stateWorkerGetStartedLink: '#lnk_StateWorker_GetStarted',
   comAssistTitle: '#Community_Assitor',
   comAssistText: '#lbl_TrainedAssitors',
-  comAssistGetStartedLink: '#lnk_CommunityAssitor_GetStarted'
+  comAssistGetStartedLink: '#lnk_CommunityAssitor_GetStarted',
+  getStartedDefaultBanner: '.banner',
+  otherOptionsSection: '.section-panel',
+  questionsSection: '.section-panel1',
+  allSubSectionsArray: ['.section1', '.section2', '.section3'],
+  allTitlesArray: ['#Individual', '#StateWorker', '#Community_Assitor'],
+  allTextsArray: ['#lbl_Connecting', '#lbl_AHCCCS', '#lbl_TrainedAssitors'],
+  allLinksArray: ['#lnk_GetStarted', '#lnk_StateWorker_GetStarted', '#lnk_CommunityAssitor_GetStarted'],
+  allImagesArray: ['.section1 img', '.section2 img', '.section3 img'],
+  indFamImg: 'img',
+  stateWorkerImg: 'img',
+  comAssistImg: 'img',
+  spanishLink: '#lnk_Spanish',
+  needCoverText: '#bodyuc_lbl_need_coverage',
+  userLogIn: '#ctl00_lbl_Page_Title',
+  exploreOptions: '#ctl00_lbl_Page_Title'
 
 }

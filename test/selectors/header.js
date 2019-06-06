@@ -15,7 +15,8 @@ export default {
   userAgreement: '#ctl00_lbl_Page_Title',
   userID: '#lbl_username',
   helpCenter: '.ui-dialog-title',
-  faqs: '.ui-dialog-title'
+  faqs: '.ui-dialog-title',
+  allLinksArray: ['#lnk_CreateAccountLnk', '#lnk_ReturningUserLogIn', '#lnk_Help', '#lnk_faqs', '#lnk_English', '#lnk_Spanish' ]
 
 }
 
