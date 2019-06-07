@@ -52,6 +52,20 @@ describe('Links', function () {
        assert.equal(el.$('a').getCSSProperty('font-weight').value, exp.fontWeightLinks)
       });
     });
+
+    // it('all links - focus outline width', function () {
+    //   sel.allLinksArray.forEach(el => {
+    //     browser.execute((selector) => {
+    //       document.querySelector(selector).focus();
+    //     }, el);
+    //
+    //     if (browser.options.capabilities.browserName === 'chrome') {
+    //       assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
+    //     } else if (browser.options.capabilities.browserName === 'firefox') {
+    //       assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
+    //     }
+    //   })
+    // });
   });
 
 
