@@ -14,7 +14,6 @@ Functional/UI testing of home page of 'health-e-arizona-plus' web application.
 * simultaneous support of two browsers: 'Chrome' and 'Firefox'
 * testing design, functionality, eng-spanish versions and general features of each section of the page (`.test/scripts` folder)
 * usage of langugage dictionary files for automated enumerating over English and Spanish content(`./test/dictionary` folder)
-* accessing of the certain web content properties using `browser.execute` function, wherever WebdriverIO native selectors do not have build-in capability
 * utilizing `webdriver-image-comparison` plugin (screenshots), whenever it was impossible to capture elements' attributes (text, etc) due to being implemented as images (`./test/specs/images` folder)
 * creation of reusabale functions and data structures in `./test/helpers.js` file
 
