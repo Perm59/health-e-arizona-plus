@@ -33,13 +33,6 @@ class Helpers {
     const bottomElLocation = $(selectorBottomEl).getLocation('y');
     return (topElLocation < middleElLocation && middleElLocation < bottomElLocation);
   }
-  //to check horizontal order of 3 elements (Top, Middle, Bottom):
-  static horizLocationCheck3Elemets(selectorLeftEl, selectorMiddleEl, selectorRightEl){
-    const leftElLocation = $(selectorLeftEl).getLocation('x');
-    const middleElLocation = $(selectorMiddleEl).getLocation('x');
-    const rightElLocation = $(selectorRightEl).getLocation('x');
-    return (leftElLocation < middleElLocation && middleElLocation < rightElLocation);
-  }
 }
 
 export default Helpers;
