@@ -1,7 +1,7 @@
 import {assert} from "chai";
-import exp from "../../expected/logo";
-import sel from "../../selectors/logo"
-import help from "../../helpers";
+import exp from "../expected/logo";
+import sel from "../selectors/logo"
+import help from "../helpers";
 
 describe('Logo general', () => {
   browser.url('/');
@@ -22,5 +22,4 @@ describe('Logo general', () => {
     browser.url('/Default/images/Arizona-StateSeal.png');
     assert.isTrue($(sel.logoImg).isDisplayed());
   });
-
 });

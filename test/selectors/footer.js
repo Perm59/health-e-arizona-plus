@@ -18,8 +18,7 @@ export default {
   allLinksArray: ['#lnk_Privacy', '#lnk_Mission', '#lnk_NonDiscrimination', '#lnk_AboutHEAplus', '#lnk_end'],
   allTextsArray: ['#lbl_copyrights', '#id_servername'],
   allLinks: '.footer-nav',
-
-
+  englishLink: '#lnk_English'
 }
 
 
