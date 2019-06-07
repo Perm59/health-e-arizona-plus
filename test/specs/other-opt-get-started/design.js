@@ -89,33 +89,8 @@ describe('Other Options Get Started Design ', function () {
     })
   });
 
-  it('subsection links underlined hover state', function () {
-    sel.allLinksArray.forEach(el => {
-      if (browser.capabilities.browserName === 'chrome') {
-        $(el).scrollIntoView();
-        $(el).moveTo();
-        browser.pause(300);
-        assert.equal($(el).getCSSProperty('text-decoration-line').value, exp.linkTextDecorationLine)
-      }
-    });
-  });
-
-  it('subsection links focus outline width', function () {
-    sel.allLinksArray.forEach(el => {
-      $(el).scrollIntoView();
-
-      browser.execute((selector) => {
-        document.querySelector(selector).focus();
-      }, el);
-
-      if (browser.options.capabilities.browserName === 'chrome') {
-        assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
-      }
-    })
-  });
-
   it('subsection images size', function (){
-    sel.allImagesArrayEng.forEach(el => {
+    sel.allImagesArray.forEach(el => {
       let width = $(el).getCSSProperty('width').parsed.value;
       let height = $(el).getCSSProperty('height').parsed.value;
       let size = `${width}x${height}px`;

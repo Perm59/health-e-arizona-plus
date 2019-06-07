@@ -36,3 +36,5 @@ describe('Get Started Default Banner - Eng-Esp Elements Exist', function () {
     });
   });
 });
+
+// Get Started button eng-spanish text - see in images (screenshots)

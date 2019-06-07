@@ -15,3 +15,5 @@ describe('Questions Section General', function () {
     assert.equal(width, exp.questionsSectionWidth);
   });
 });
+
+//verify that there 3 subsection - see in images (screenshots)

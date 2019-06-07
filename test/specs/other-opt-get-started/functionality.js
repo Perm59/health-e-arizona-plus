@@ -12,7 +12,6 @@ describe('Other Options Get Started Functionality', function () {
       $(el).click();
       $(bannerTitleSelector.title).waitForDisplayed(3000);
       let subSectionTitle = $(sel.allTitlesArray[index]).getText();
-      console.log(subSectionTitle);
       assert.equal($(bannerTitleSelector.title).getText(), subSectionTitle);
     })
   });

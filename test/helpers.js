@@ -7,12 +7,16 @@ class Helpers {
     return $(id);
   }
 
-  static getFirstRowElements() {
+  static getFirstRowElementsHeader() {
     return $$(sel.firstRowAllLinksTag)[0].$$(sel.firstRowLinkTag);
   }
 
-  static getSecondRowElements() {
+  static getSecondRowElementsHeader() {
     return $$(sel.secondRowAllLinksTag)[1].$$(sel.secondRowLinkTag);
+  }
+
+  static getAllLinkElementsFooter() {
+    return $$('ul')[2].$$('li');
   }
 
   //to check if one element (TopEl) is higher vertically than another (BottomEl):
