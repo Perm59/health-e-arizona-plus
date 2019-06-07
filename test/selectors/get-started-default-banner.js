@@ -10,5 +10,5 @@ export default {
   getStartedImgEs: 'img',
   getStartedButtonEng: '#img_GetStart',
   getStartedButtonEs: '#img_GetStart_ES',
-  needCoverText: '#bodyuc_lbl_need_coverage'
+  needCoverText: '#bodyuc_lbl_need_coverage',
 }

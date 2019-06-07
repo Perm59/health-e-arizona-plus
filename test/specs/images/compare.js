@@ -1,7 +1,6 @@
 import { assert } from 'chai';
 import sel from '../../selectors/compare';
 import data from '../../data/compare'
-//import exp from '../../expected/';
 import mergeImg from 'merge-img';
 
 describe('Screenshots to check elements exist', function () {

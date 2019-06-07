@@ -210,6 +210,32 @@ describe('Other Options Get Started', () => {
         assert.equal(size, exp.subsectionImgSize);
       })
     });
+
+    it('subsection links underlined hover state', function () {
+      sel.allLinksArray.forEach(el => {
+        if (browser.capabilities.browserName === 'chrome') {
+          $(el).scrollIntoView();
+          $(el).moveTo();
+          browser.pause(1000);
+          assert.equal($(el).getCSSProperty('text-decoration-line').value, exp.linkTextDecorationLine)
+        }
+      });
+    });
+
+    // it('all links - focus outline width', function () {
+    //   sel.allLinksArray.forEach(el => {
+    //     $(el).scrollIntoView()
+    //     browser.execute((selector) => {
+    //       document.querySelector(selector).focus();
+    //     }, el);
+    //
+    //     if (browser.options.capabilities.browserName === 'chrome') {
+    //       assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksChrome);
+    //     } else if (browser.options.capabilities.browserName === 'firefox') {
+    //       assert.equal($(el).getCSSProperty('outline-width').value, exp.outlineWidthLinksFirefox)
+    //     }
+    //   })
+    // });
   });
 
   describe('Functionality', function () {

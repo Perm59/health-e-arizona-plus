@@ -10,6 +10,6 @@ export default {
   fontWeightLinks: 400,
   textDecorationLine: 'underline',
   outlineWidthLinksFirefox: '1px',
-  outlineWidthLinksChrome: '5px'
-
+  outlineWidthLinksChrome: '5px',
+  linkTextDecorationLine: 'underline'
 }
