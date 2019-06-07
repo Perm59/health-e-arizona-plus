@@ -5,24 +5,8 @@ import mergeImg from 'merge-img';
 
 describe('Screenshots to check elements exist', function () {
 
-  it(data.home, function () {
-    browser.url('/');
-    $(sel.logo).waitForDisplayed();
-    if (browser.capabilities.browserName === 'firefox') {
-      let res = browser.checkFullPageScreen(data.home);
-      if (res > 0) {
-        mergeImg([`${data.screenPath}${data.basePath}${data.home}.png`,
-          `${data.screenPath}${data.actPath}${data.home}.png`,
-          `${data.screenPath}${data.diffPath}${data.home}.png`])
-          .then((img) => {
-            img.write(`${data.mergePath}${data.home}.png`);
-          });
-      }
-      assert.equal(res, 0);
-   }
-  });
-
   it(data.getStartedButtonEng, function () {
+    browser.url('/');
     $(sel.getStartedButtonEng).scrollIntoView();
     let res = browser.checkElement($(sel.getStartedButtonEng), data.getStartedButtonEng);
     if (res > 0) {
@@ -49,5 +33,24 @@ describe('Screenshots to check elements exist', function () {
         });
     }
     assert.equal(res, 0);
+  });
+
+  it(data.home, function () {
+    browser.url('/');
+    $(sel.logo).waitForDisplayed();
+      let res = browser.checkFullPageScreen(data.home, {
+        hideElements: [
+          $('#id_servername')
+        ]
+      });
+      if (res > 0) {
+        mergeImg([`${data.screenPath}${data.basePath}${data.home}.png`,
+          `${data.screenPath}${data.actPath}${data.home}.png`,
+          `${data.screenPath}${data.diffPath}${data.home}.png`])
+          .then((img) => {
+            img.write(`${data.mergePath}${data.home}.png`);
+          });
+      }
+      assert.equal(res, 0);
   });
 });

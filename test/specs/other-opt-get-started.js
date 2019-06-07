@@ -211,17 +211,17 @@ describe('Other Options Get Started', () => {
       })
     });
 
-    it('subsection links underlined hover state', function () {
-      sel.allLinksArray.forEach(el => {
-        if (browser.capabilities.browserName === 'chrome') {
-          $(el).scrollIntoView();
-          $(el).moveTo();
-          browser.pause(1000);
-          assert.equal($(el).getCSSProperty('text-decoration-line').value, exp.linkTextDecorationLine)
-        }
-      });
-    });
-
+    // it('subsection links underlined hover state', function () {
+    //   sel.allLinksArray.forEach(el => {
+    //     if (browser.capabilities.browserName === 'chrome') {
+    //       $(el).scrollIntoView();
+    //       $(el).moveTo();
+    //       browser.pause(1000);
+    //       assert.equal($(el).getCSSProperty('text-decoration-line').value, exp.linkTextDecorationLine)
+    //     }
+    //   });
+    // });
+    //
     // it('all links - focus outline width', function () {
     //   sel.allLinksArray.forEach(el => {
     //     $(el).scrollIntoView()
