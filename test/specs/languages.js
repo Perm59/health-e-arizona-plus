@@ -132,6 +132,7 @@ describe('Languages', () => {
         $(el).click();
         $(sel.message).scrollIntoView();
         $(sel.message).waitForDisplayed(3000);
+        browser.pause(400);
         assert.equal($(sel.message).getText(), exp.messagesArray[index]);
       })
     });

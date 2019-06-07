@@ -40,7 +40,8 @@ describe('Screenshots to check elements exist', function () {
     $(sel.logo).waitForDisplayed();
       let res = browser.checkFullPageScreen(data.home, {
         hideElements: [
-          $('#id_servername')
+          $(sel.footerText),
+          $(sel.footerServerID)
         ]
       });
       if (res > 0) {

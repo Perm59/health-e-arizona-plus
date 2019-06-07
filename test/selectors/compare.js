@@ -3,5 +3,7 @@ export default {
   getStartedButtonEng: '#img_GetStart',
   getStartedButtonEs: '#img_GetStart_ES',
   questionsSection: '.section-panel1',
-  spanishLink: '#lnk_Spanish'
+  spanishLink: '#lnk_Spanish',
+  footerServerID: '#id_servername',
+  footerText: '#lbl_copyrights'
 }
